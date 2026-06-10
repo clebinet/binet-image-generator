@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Générateur d'images IA</title>
+
+<style>
+:root {
+  --bg: #0b1220;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #eaf0ff;
+  --muted: rgba(234, 240, 255, 0.7);
+  --accent: #4f8cff;
+  --accent-dark: #2f6fe0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(circle at top, #121a2b, var(--bg));
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+  backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: -0.5px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 10px 30px rgba(79, 140, 255, 0.25);
+}
+
+.btn-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(79, 140, 255, 0.35);
+}
+
+.meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 1rem 2.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.card i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* STEPS */
+.section-title {
+  text-align: center;
+  font-size: 18px;
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+}
+
+.steps {
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.step {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 1rem;
+}
+
+.step-num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.step-text {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.step-text strong {
+  color: var(--text);
+}
+
+/* DIVIDER */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  padding-bottom: 2rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <div class="badge">Gratuit & open source</div>
+  <h1>Générateur d'images IA</h1>
+  <p>
+    Crée des images à partir de tes descriptions en français.
+    Fonctionne 100 % en local sur ta machine — génération illimitée, sans abonnement.
+  </p>
+
+  <a class="btn-download" href="https://drive.google.com/file/d/10GB9dlvAB2UXyxulS4wVjeHBuTymQryD/view?usp=drive_link" target="_blank">
+    <i>⬇</i>
+    Télécharger — Windows (.exe)
+  </a>
+
+  <p class="meta">Version 1.0 · 248 Mo · Windows 10/11</p>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <i>∞</i>
+    <h3>Illimité</h3>
+    <p>Aucune API, aucun token. Génère autant d'images que tu veux.</p>
+  </div>
+
+  <div class="card">
+    <i>🌐</i>
+    <h3>Multilingue</h3>
+    <p>Écris ton prompt en français ou dans n'importe quelle langue.</p>
+  </div>
+
+  <div class="card">
+    <i>⚙</i>
+    <h3>100 % local</h3>
+    <p>Tout tourne sur ta machine. Aucune donnée envoyée en ligne.</p>
+  </div>
+
+  <div class="card">
+    <i>💻</i>
+    <h3>Simple</h3>
+    <p>Interface graphique intuitive, pas besoin de ligne de commande.</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<p class="section-title">Comment ça marche ?</p>
+
+<div class="steps">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text"><strong>Télécharge et lance</strong> l'exe. Le modèle se télécharge automatiquement.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text"><strong>Écris ton prompt</strong> en français.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-text"><strong>Clique sur Générer</strong> et attends quelques minutes.</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-text"><strong>Sauvegarde</strong> ton image en PNG ou JPEG.</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<p class="footer">
+  Développé avec l'aide de Claude (Anthropic) · Basé sur Stable Diffusion v1.5
+</p>
+
+</body>
+</html>
